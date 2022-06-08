@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    transition: all ease-out 0.5s;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+  
+    position:relative;
+    height :auto;
+    width: auto;
+}
+.img1 {
+    height: 700px;
+    width:900px;
+
+}
+#boutton {
+    background-color: #5100ff;
+}
+.zoom a btn {     
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 3s ease-in-out;
+    transition: 3s ease-in-out;
+}
+.zoom a:hover btn{
+    -webkit-transform: scale(1.3);
+transform: scale(1.3);
+}
+
+:root{
+    --blue: #3542e4;
+}
+/***** Navbar Section Starts ******/
+
+
+nav{
+    display: flex;
+    padding: 20px 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+}
+.logo{
+    font-size: 35px;
+    font-weight: 600;
+}
+.logo::first-letter{
+    color: var(--blue);
+}
+nav ul a{
+    margin-right: 50px;
+}
+
+nav ul a:hover{
+    color: var(--blue);
+}
+
+
+@media only screen and (max-width: 800px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+        text-align: center;
+    }
+}
+
+/***** Home Section Starts ******/
+
+.home{
+    display: flex;
+    padding: 80px 50px;
+}
+
+h1{
+    font-size: 60px;
+    color: var(--blue);
+}
+p{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.btn,
+.left .btn{
+    background-color: var(--blue);
+    width: fit-content;
+    padding: 15px 30px;
+    font-size: 19px;
+    color: white;
+    border-radius: 20px;
+    
+}
+.btn:hover{
+    background-color: #303f9f;
+}
+.left{
+    padding-top: 50PX;
+}
+
+.img{
+    width: 70%;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+        padding: 50px;
+        padding-top: 10px;
+    }
+    .home .img{
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+/***** About Section Starts ******/
+
+.about{
+    padding: 50px;
+    text-align: center;
+}
+.abt{
+    display: flex;
+    text-align: left;
+}
+.abt .left{
+    width: 50%;
+
+}
+h2{
+    color: var(--blue);
+}
+
+@media only screen and (max-width: 800px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+        padding: 40px;
+        padding-top: 10px;
+    }
+    .abt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .abt .left{
+        width: 100%;
+    }
+}
+
+
+/***** Portfolio Section Starts ******/
+
+
+.portfolio{
+    text-align: center;
+    padding: 50px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 20px;
+    row-gap: 20PX;
+}
+.card:hover{
+    filter: brightness(80%);
+}
+
+
+@media only screen and (max-width: 800px) {
+    .cards{
+    grid-template-columns: repeat(1,1fr);
+
+    }
+}
+
+
+/***** Blog Section Starts ******/
+
+.blog{
+    padding: 50px;
+    text-align: center;
+}
+h1{
+    font-size: 40px;
+}
+.posts{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 50px;
+    column-gap: 30px;
+    row-gap: 20PX;
+}
+.post{
+    display: flex;
+    text-align: left;
+    line-height: 1;
+    cursor: pointer;
+    background-color: #faf9ff;
+}
+.post:hover{
+    filter: brightness(90%);
+}
+.post p{
+    font-size: 16px;
+    margin: 0;
+}
+.post h2{
+    font-size: 25px;
+}
+.pic{
+    width:  150px;
+    height: 100px;
+}
+.detail{
+    margin-left: 20px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .posts{
+    grid-template-columns: repeat(1,1fr);
+
+    }
+}
+
+
+/***** Contact Section Starts ******/
+
+.contact{
+    padding: 50px;
+}
+.contact .title{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 200px;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline-color: #303f9f;
+}
+textarea{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    outline-color: #303f9f;
+    height: 200px;
+    resize: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    form{
+        padding: 0 20px;
+    }
+}
+#topaccueil:hover{
+background-image: linear-gradient(to right, #a2bcfc, #fffeaa00,#fffeaa00,#a2bcfc);
+box-shadow: 0 4px 15px;
+color: rgb(37, 24, 207);
+border-radius: 3px;
+}
+#topApropos:hover{
+    background-image: linear-gradient(to right, #a2bcfc, #fffeaa00,#fffeaa00,#a2bcfc);
+    box-shadow: 0 4px 15px;
+    color: rgb(37, 24, 207);
+    border-radius: 3px;
+    }
+#topPortfolio:hover{
+        background-image: linear-gradient(to right, #a2bcfc, #fffeaa00,#fffeaa00,#a2bcfc);
+        box-shadow: 0 4px 15px;
+        color: rgb(37, 24, 207);
+        border-radius: 3px;
+        }
+#topContact:hover{
+            background-image: linear-gradient(to right, #a2bcfc, #fffeaa00,#fffeaa00,#a2bcfc);
+            box-shadow: 0 4px 15px;
+            color: rgb(37, 24, 207);
+            border-radius: 3px;
+            }
+#submit{
+    background-image: linear-gradient(to right, #a2bcfc, #fffeaa00,#fffeaa00,#a2bcfc);
+    box-shadow: 0 4px 15px;
+    border-radius: 3px;
+}
+#submit:hover{
+    
+}
+/***** Footer Section Starts ******/
+
+footer{
+    margin: 0 50px;
+}
+footer nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 2;
+}
+
+.copy{
+    text-align: center;
+    margin: 20px;
+}
+.animated-progress {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 20px 10px;
+    border: 1px solid rgb(189, 113, 113);
+    overflow: hidden;
+    position: relative;
+  }
+  .progress_bar {
+    margin: auto;
+    width: 450px;
+    max-width:80%;
+    height: 15px;
+    box-shadow: 0px 0px 4px #ffffffd1;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .progress_bar:before {
+      content: '';
+      width: 200%;
+      height: 100%;
+      position: absolute;
+      animation: progress-anime 8s ease-out alternate ;
+      background: linear-gradient(to right, hsl(93, 94%, 42%) 0%,#90e80d 50%,#07640a 50%,#d2d2d2 100%);
+  }
+  
+  @keyframes progress-anime {
+      0% {left: -100%;}
+      75% {left: -5%;}
+      85% {left: -5%;}
+      95% {left: 0;}
+  }
+
+  
+  
+  .animated-progress span {
+    height: 100%;
+    display: block;
+    width: 0;
+    color: rgb(255, 251, 251);
+    line-height: 30px;
+    position:absolute;
+    text-align: end;
+    padding-right: 5px;
+  }
+  
+  .progress-blue {
+    background-color: blue;
+  }
+  .progress-green span {
+    background-color: green;
+  }
+  .progress-purple span {
+    background-color: indigo;
+  }
+  .progress-red span {
+    background-color: red;
+  }
+
+.progress-red span {
+  background-color: rgb(255, 225, 0);
+}
+
+  
